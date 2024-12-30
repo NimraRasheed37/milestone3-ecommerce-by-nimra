@@ -11,7 +11,7 @@ const books = [
     category: "english",
     description: "Harry Potter, an orphan mistreated by his relatives, discovers on his 11th birthday that he is a wizard. He attends Hogwarts School of Witchcraft and Wizardry, where he learns about his magical heritage and the death of his parents at the hands of the dark wizard Voldemort. Along with his new friends Ron Weasley and Hermione Granger, Harry uncovers the mystery of the Philosopher’s Stone, which grants immortality. Together, they thwart Voldemort’s attempt to return to power, establishing Harry as a brave and capable young wizard."
   },
-  {
+  { 
     id: 2,
     title: "Harry Potter and the chamber of secrets",
     author: "J.K.Rowling",
