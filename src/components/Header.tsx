@@ -6,7 +6,7 @@ import Image from "next/image";
 import clsx from "clsx";
 import { FaBars } from "react-icons/fa";
 import { FiShoppingCart, FiX, FiChevronDown } from "react-icons/fi";
-import { useCart } from "@/app/context/CartContext";
+import { useCart } from "@/context/CartContext";
 
 const Header = () => {
   const { cartItems } = useCart();

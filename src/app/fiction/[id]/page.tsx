@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { useCart } from "../../context/CartContext"; 
+import { useCart } from "../../../context/CartContext"; 
 import { Book } from "../../types/type";
 import { useRouter } from "next/navigation";  
 import Image from "next/image";

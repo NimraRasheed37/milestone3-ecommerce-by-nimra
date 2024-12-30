@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../../context/CartContext";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -33,7 +33,7 @@ const CheckoutPage = () => {
   });
   const [orderPlaced, setOrderPlaced] = useState(false);
 
-  const shipmentCharges = 5;
+  const shipmentCharges = 250;
 
   const calculateSubtotal = (): number => {
     return cartItems.reduce((total: number, item: CartItem) => {

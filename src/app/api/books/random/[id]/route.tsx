@@ -182,7 +182,7 @@ const books = [
     category: "random",
     description: "The book is as precious as its name indicates Main Anmol (I Am Precious). This title gives you a sense of self-worth, and makes you think that how much different and unique you're in your own way. This is one of the great self-help book, and the author has done her best to help you in your spiritual as well as psychological journey to your true-self"
   }
-  ];
+  ]
 
   
     export async function GET(req: Request) {

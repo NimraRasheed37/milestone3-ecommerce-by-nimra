@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { useCart } from "../../context/CartContext"; 
+import { useCart } from "../../../context/CartContext"; 
 import { Book } from "../../types/type";
 import { useRouter } from "next/navigation";  
 import Image from "next/image";
@@ -32,8 +32,8 @@ const AllBooksDetail = () => {
   }, [id]);
 
   const handleBuyNow = () => {
-    addToCart(book!);  // Add the current book to the cart
-    router.push("/checkout");  // Redirect to the checkout page
+    addToCart(book!);
+    router.push("/checkout"); 
   };
 
   const handleAddToCart = () => {
