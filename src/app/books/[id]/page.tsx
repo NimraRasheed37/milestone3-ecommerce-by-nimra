@@ -18,7 +18,7 @@ const AllBooksDetail = () => {
   useEffect(() => {
     const fetchBookDetails = async () => {
       try {
-        const response = await fetch(`/api/books/random/${id}`);
+        const response = await fetch(`/api/books/english/${id}`) ;
         if (!response.ok) throw new Error("Book not found");
         const data = await response.json();
         setBook(data);

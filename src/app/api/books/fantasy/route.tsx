@@ -17,7 +17,7 @@ export async function GET() {
       id: 2,
       title: "Harry Potter and the chamber of secrets",
       author: "J.K.Rowling",
-      price: "7500 PKR",
+      price: "750 PKR",
       image: "/img/books/fantasy/hp2.webp",
       category: "fantasy",
       categoryId: 2,

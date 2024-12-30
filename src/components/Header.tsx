@@ -20,9 +20,15 @@ const Header = () => {
   const toggleCategories = () => setIsCategoriesOpen((prev) => !prev);
   const toggleMobileCategories = () => setIsMobileCategoriesOpen((prev) => !prev);
 
+  // Close the mobile menu when a link is clicked
+  const handleMobileLinkClick = () => setMobileMenuOpen(false);
+
+  // Close the cart sidebar when a link is clicked
+  const handleCartLinkClick = () => setIsCartSidebarOpen(false);
+
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="flex items-center justify-between py-4 px-6">
+      <div className="flex items-center justify-around py-4 px-6">
         {/* Sidebar Toggle Icon */}
         <button className="md:hidden mr-4" onClick={toggleMobileMenu}>
           <FaBars size={24} className="text-red-800 cursor-pointer" />
@@ -58,12 +64,8 @@ const Header = () => {
               </div>
             )}
           </div>
-          <Link href="/request-book" className="block hover:text-red-800">
-            Request a Book
-          </Link>
-          <Link href="/contact" className="block hover:text-red-800">
-            Contact
-          </Link>
+          <Link href="/request-book" className="block hover:text-red-800">Request a Book</Link>
+          <Link href="/contact" className="block hover:text-red-800">Contact</Link>
         </nav>
 
         {/* Cart Icon */}
@@ -91,23 +93,23 @@ const Header = () => {
         </button>
         <Image src="/img/logo/Ababeel (4).png" className="p-4" alt="Logo" width={150} height={50} />
         <nav className="p-4 space-y-4 font-bold">
-          <Link href="/" className="block hover:text-red-800">Home</Link>
-          <Link href="/books" className="block hover:text-red-800">Books</Link>
+          <Link href="/" className="block hover:text-red-800" onClick={handleMobileLinkClick}>Home</Link>
+          <Link href="/books" className="block hover:text-red-800" onClick={handleMobileLinkClick}>Books</Link>
           <div className="relative">
             <button onClick={toggleMobileCategories} className="flex items-center hover:text-red-800">
               Categories <FiChevronDown className="ml-1" />
             </button>
             {isMobileCategoriesOpen && (
               <div className="mt-2">
-                <Link href="/urdu" className="block px-4 py-2 font-semibold hover:bg-red-600 hover:text-white">Urdu</Link>
-                <Link href="/english" className="block px-4 py-2 font-semibold hover:bg-red-600 hover:text-white">English</Link>
-                <Link href="/fiction" className="block px-4 py-2 font-semibold hover:bg-red-600 hover:text-white">Fiction</Link>
-                <Link href="/fantasy" className="block px-4 py-2 font-semibold hover:bg-red-600 hover:text-white">Fantasy</Link>
+                <Link href="/urdu" className="block px-4 py-2 font-semibold hover:bg-red-600 hover:text-white" onClick={handleMobileLinkClick}>Urdu</Link>
+                <Link href="/english" className="block px-4 py-2 font-semibold hover:bg-red-600 hover:text-white" onClick={handleMobileLinkClick}>English</Link>
+                <Link href="/fiction" className="block px-4 py-2 font-semibold hover:bg-red-600 hover:text-white" onClick={handleMobileLinkClick}>Fiction</Link>
+                <Link href="/fantasy" className="block px-4 py-2 font-semibold hover:bg-red-600 hover:text-white" onClick={handleMobileLinkClick}>Fantasy</Link>
               </div>
             )}
           </div>
-          <Link href="/request-book" className="block hover:text-red-800">Request a Book</Link>
-          <Link href="/contact" className="block hover:text-red-800">Contact</Link>
+          <Link href="/request-book" className="block hover:text-red-800" onClick={handleMobileLinkClick}>Request a Book</Link>
+          <Link href="/contact" className="block hover:text-red-800" onClick={handleMobileLinkClick}>Contact</Link>
         </nav>
       </div>
 
@@ -145,10 +147,10 @@ const Header = () => {
           )}
           {cartItems.length > 0 && (
             <div className="mt-6">
-              <Link href="/cart">
-              <button className="w-full bg-red-800 text-white py-2 px-4 rounded-md mb-2">
-                Go To Cart
-              </button>
+              <Link href="/cart" onClick={handleCartLinkClick}>
+                <button className="w-full bg-red-800 text-white py-2 px-4 rounded-md mb-2">
+                  Go To Cart
+                </button>
               </Link>
               <button
                 onClick={toggleCartSidebar}

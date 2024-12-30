@@ -15,7 +15,7 @@ const books = [
     id: 2,
     title: "Harry Potter and the chamber of secrets",
     author: "J.K.Rowling",
-    price: "7500 PKR",
+    price: "750 PKR",
     image: "/img/books/english/hp2.webp",
     category: "english",
     description: "In his second year at Hogwarts, Harry faces new dangers as the Chamber of Secrets is opened, releasing a monster that petrifies students. The legend warns that only the Heir of Slytherin can control the creature. With Hermione’s intellect, Ron’s loyalty, and Harry’s courage, they unravel the mystery, discovering that a young Voldemort had manipulated events through a magical diary. Harry defeats the monster, a deadly basilisk, and destroys the diary, a fragment of Voldemort’s soul."

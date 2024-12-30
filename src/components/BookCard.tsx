@@ -34,7 +34,7 @@ const BooksCards = ({ book }: BookCardProps) => {
             alt={book.title}
             width={150}
             height={220}
-            objectFit="cover"
+            objectFit="contain"
             className="rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-110"
           />
         </div>

@@ -12,7 +12,7 @@ const AllBooksPage = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch("/api/books/random"); 
+        const response = await fetch("/api/books/english"); 
         if (!response.ok) {
           throw new Error("Failed to fetch books");
         }
